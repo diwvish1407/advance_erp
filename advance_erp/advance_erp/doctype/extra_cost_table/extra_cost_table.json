@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-03 23:27:31.743993",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "extra_cost_type",
+  "column_break_rkaw",
+  "extra_cost_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "extra_cost_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Extra Cost Type",
+   "options": "Extra Cost"
+  },
+  {
+   "fieldname": "column_break_rkaw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "extra_cost_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Extra Cost Amount"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-03 23:28:27.293773",
+ "modified_by": "Administrator",
+ "module": "Advance ERP",
+ "name": "Extra Cost Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

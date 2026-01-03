@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-03 06:15:47.066211",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_geolocation_feature_for_invoicing",
+  "radius"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_geolocation_feature_for_invoicing",
+   "fieldtype": "Check",
+   "label": "Enable Geolocation Feature for Sales Invoice"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.enable_geolocation_feature_for_invoicing",
+   "fieldname": "radius",
+   "fieldtype": "Float",
+   "label": "Radius (Km)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-01-03 06:20:40.414934",
+ "modified_by": "Administrator",
+ "module": "Advance ERP",
+ "name": "Advanced ERP Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

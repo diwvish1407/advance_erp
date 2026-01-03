@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-04 00:32:38.271344",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_editing",
+  "column_break_osgj",
+  "historical_prices_number_of_last_records",
+  "payment_behaviour_duration_months_for_fair",
+  "section_break_okjn",
+  "default_period_days",
+  "column_break_thnc",
+  "default_low_stock_threshold",
+  "column_break_ywpr",
+  "default_high_stock_threshold",
+  "column_break_igof",
+  "default_low_demand_threshold",
+  "column_break_pyvt",
+  "default_high_demand_threshold",
+  "weights_section",
+  "default_quote_qty_weight",
+  "column_break_pyqx",
+  "default_stock_level_weight",
+  "column_break_rpja",
+  "default_market_condition_weight",
+  "column_break_tkeg",
+  "default_sales_order_trend_weight",
+  "column_break_ggmf",
+  "default_customer_level_weight",
+  "column_break_newg",
+  "default_predictive_factor_weight"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_period_days",
+   "fieldtype": "Int",
+   "label": "Default Period (Days)"
+  },
+  {
+   "fieldname": "default_quote_qty_weight",
+   "fieldtype": "Percent",
+   "label": "Default Quote Qty Weight"
+  },
+  {
+   "fieldname": "default_customer_level_weight",
+   "fieldtype": "Percent",
+   "label": "Default Customer Level Weight"
+  },
+  {
+   "fieldname": "default_stock_level_weight",
+   "fieldtype": "Percent",
+   "label": "Default Stock Level Weight"
+  },
+  {
+   "fieldname": "default_sales_order_trend_weight",
+   "fieldtype": "Percent",
+   "label": "Default Sales Order Trend Weight"
+  },
+  {
+   "fieldname": "default_market_condition_weight",
+   "fieldtype": "Percent",
+   "label": "Default Market Condition Weight"
+  },
+  {
+   "fieldname": "default_predictive_factor_weight",
+   "fieldtype": "Percent",
+   "label": "Default Predictive Factor Weight"
+  },
+  {
+   "fieldname": "column_break_thnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_low_stock_threshold",
+   "fieldtype": "Percent",
+   "label": "Default Low Stock Threshold"
+  },
+  {
+   "fieldname": "default_high_stock_threshold",
+   "fieldtype": "Percent",
+   "label": "Default High Stock Threshold"
+  },
+  {
+   "fieldname": "default_low_demand_threshold",
+   "fieldtype": "Percent",
+   "label": "Default Low Demand Threshold"
+  },
+  {
+   "fieldname": "default_high_demand_threshold",
+   "fieldtype": "Percent",
+   "label": "Default High Demand Threshold"
+  },
+  {
+   "fieldname": "column_break_ywpr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_igof",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_editing",
+   "fieldtype": "Check",
+   "label": "Enable Editing"
+  },
+  {
+   "fieldname": "section_break_okjn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_pyvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weights_section",
+   "fieldtype": "Section Break",
+   "label": "Weights"
+  },
+  {
+   "fieldname": "column_break_pyqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rpja",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tkeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ggmf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_newg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "historical_prices_number_of_last_records",
+   "fieldtype": "Int",
+   "label": "Historical Prices (Number of Last Records)"
+  },
+  {
+   "fieldname": "column_break_osgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_behaviour_duration_months_for_fair",
+   "fieldtype": "Int",
+   "label": "Payment Behaviour Duration (Months) for Fair"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-01-04 03:04:28.929863",
+ "modified_by": "Administrator",
+ "module": "Advance ERP",
+ "name": "Price Estimation Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

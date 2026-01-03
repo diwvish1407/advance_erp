@@ -1,0 +1,483 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-03 20:45:44.191399",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "overview_section",
+  "item_code",
+  "column_break_fitt",
+  "item_name",
+  "column_break_nmsx",
+  "item_group",
+  "column_break_tukb",
+  "warehouse",
+  "column_break_yaws",
+  "company",
+  "section_break_rikg",
+  "last_purchase_rate",
+  "column_break_wiaz",
+  "valuation_rate",
+  "historical_prices_section",
+  "previous_quotations",
+  "column_break_dbwv",
+  "previous_invoices",
+  "section_break_idrd",
+  "period_days",
+  "weights_section",
+  "column_break_xabs",
+  "quote_qty_weight",
+  "column_break_brjk",
+  "customer_level_weight",
+  "column_break_ievh",
+  "stock_level_weight",
+  "column_break_qfka",
+  "sales_order_trend_weight",
+  "column_break_eukf",
+  "market_competition_weight",
+  "column_break_kdsr",
+  "predictive_factor_weight",
+  "quotation_level_section",
+  "extra_costs",
+  "total_extra_cost",
+  "column_break_msop",
+  "quote_qty",
+  "quote_uom",
+  "urgency",
+  "customer_level_section",
+  "customer",
+  "column_break_dehy",
+  "customer_type",
+  "column_break_ylcr",
+  "payment_behaviour",
+  "column_break_gyok",
+  "purchase_power",
+  "section_break_vkzw",
+  "low_stock_threshold",
+  "column_break_rjxw",
+  "high_stock_threshold",
+  "column_break_rhlb",
+  "stock_level",
+  "sales_order_trend_level_section",
+  "average_demand",
+  "current_demand",
+  "column_break_ogtq",
+  "low_demand_threshold",
+  "high_demand_threshold",
+  "column_break_bqzr",
+  "current_demand_level",
+  "market_condition_level_section",
+  "seasonal_demand",
+  "column_break_kqqh",
+  "inflation",
+  "section_break_uzvx",
+  "predictive_factor_level_column",
+  "historical_success_rate",
+  "price_suggestion_column",
+  "suggested_price",
+  "section_break_gy03",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_gy03",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Price Estimation",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_fitt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nmsx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item_code.item_group",
+   "fieldname": "item_group",
+   "fieldtype": "Data",
+   "label": "Item Group",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rikg",
+   "fieldtype": "Section Break",
+   "label": "Purchase Rates"
+  },
+  {
+   "fieldname": "column_break_wiaz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valuation_rate",
+   "fieldtype": "Currency",
+   "label": "Valuation Rate"
+  },
+  {
+   "fieldname": "last_purchase_rate",
+   "fieldtype": "Currency",
+   "label": "Last Purchase Rate"
+  },
+  {
+   "fieldname": "section_break_vkzw",
+   "fieldtype": "Section Break",
+   "label": "Stock Level"
+  },
+  {
+   "fieldname": "column_break_tukb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_rjxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "stock_level_weight",
+   "fieldtype": "Float",
+   "label": "Stock Level Weight"
+  },
+  {
+   "description": "Sum of weights should be 100.",
+   "fieldname": "weights_section",
+   "fieldtype": "Section Break",
+   "label": "Weights"
+  },
+  {
+   "fieldname": "customer_level_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Level"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_dehy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ievh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_level_weight",
+   "fieldtype": "Float",
+   "label": "Customer Level Weight"
+  },
+  {
+   "fieldname": "payment_behaviour",
+   "fieldtype": "Select",
+   "label": "Payment Behaviour",
+   "options": "\nGood\nFair\nPoor"
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "\nNew & Wholesale\nNew & Retail\nRegular & Wholesale\nRegular & Retail"
+  },
+  {
+   "fieldname": "column_break_ylcr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "\n",
+   "fieldname": "purchase_power",
+   "fieldtype": "Select",
+   "label": "Purchase Power",
+   "options": "\nLow\nMedium\nHigh"
+  },
+  {
+   "fieldname": "column_break_qfka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_order_trend_weight",
+   "fieldtype": "Float",
+   "label": "Sales Order Trend Weight"
+  },
+  {
+   "fieldname": "column_break_xabs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_eukf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_demand_level",
+   "fieldtype": "Select",
+   "label": "Current Demand Level",
+   "options": "\nLow\nMedium\nHigh"
+  },
+  {
+   "fieldname": "column_break_ogtq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "average_demand",
+   "fieldtype": "Float",
+   "label": "Average Demand"
+  },
+  {
+   "fieldname": "column_break_bqzr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_demand",
+   "fieldtype": "Float",
+   "label": "Current Demand"
+  },
+  {
+   "fieldname": "low_demand_threshold",
+   "fieldtype": "Percent",
+   "label": "Low Demand Threshold"
+  },
+  {
+   "fieldname": "high_demand_threshold",
+   "fieldtype": "Percent",
+   "label": "High Demand Threshold"
+  },
+  {
+   "fieldname": "quote_qty",
+   "fieldtype": "Float",
+   "label": "Quote Qty"
+  },
+  {
+   "fieldname": "quote_uom",
+   "fieldtype": "Link",
+   "label": "Quote UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "column_break_msop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quote_qty_weight",
+   "fieldtype": "Float",
+   "label": "Quote Qty Weight"
+  },
+  {
+   "fieldname": "column_break_brjk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "urgency",
+   "fieldtype": "Select",
+   "label": "Urgency",
+   "options": "\nLow\nMedium\nHigh"
+  },
+  {
+   "fieldname": "seasonal_demand",
+   "fieldtype": "Select",
+   "label": "Seasonal Demand",
+   "options": "\nLow\nMedium\nHigh"
+  },
+  {
+   "fieldname": "column_break_kqqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inflation",
+   "fieldtype": "Percent",
+   "label": "Inflation"
+  },
+  {
+   "fieldname": "extra_costs",
+   "fieldtype": "Table",
+   "label": "Extra Costs",
+   "options": "Extra Cost Table"
+  },
+  {
+   "fieldname": "total_extra_cost",
+   "fieldtype": "Currency",
+   "label": "Total Extra Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "market_competition_weight",
+   "fieldtype": "Float",
+   "label": "Market Condition Weight"
+  },
+  {
+   "fieldname": "column_break_kdsr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "predictive_factor_weight",
+   "fieldtype": "Float",
+   "label": "Predictive Factor Weight"
+  },
+  {
+   "description": "Quotation vs Sales Order",
+   "fieldname": "historical_success_rate",
+   "fieldtype": "Float",
+   "label": "Historical Success Rate"
+  },
+  {
+   "fieldname": "suggested_price",
+   "fieldtype": "Currency",
+   "label": "Suggested Price"
+  },
+  {
+   "description": "Number of Last Records can be set in Price Estimation Setting.",
+   "fieldname": "historical_prices_section",
+   "fieldtype": "Section Break",
+   "label": "Historical Prices"
+  },
+  {
+   "fieldname": "previous_quotations",
+   "fieldtype": "HTML",
+   "label": "Previous Quotations"
+  },
+  {
+   "fieldname": "column_break_dbwv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previous_invoices",
+   "fieldtype": "HTML",
+   "label": "Previous Invoices"
+  },
+  {
+   "fieldname": "section_break_idrd",
+   "fieldtype": "Section Break",
+   "label": "Analytical Dimensions"
+  },
+  {
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "quotation_level_section",
+   "fieldtype": "Section Break",
+   "label": "Quotation Level"
+  },
+  {
+   "fieldname": "sales_order_trend_level_section",
+   "fieldtype": "Section Break",
+   "label": "Sales Order Trend Level"
+  },
+  {
+   "fieldname": "market_condition_level_section",
+   "fieldtype": "Section Break",
+   "label": "Market Condition Level"
+  },
+  {
+   "fieldname": "section_break_uzvx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "predictive_factor_level_column",
+   "fieldtype": "Column Break",
+   "label": "Predictive Factor Level"
+  },
+  {
+   "fieldname": "price_suggestion_column",
+   "fieldtype": "Column Break",
+   "label": "Price Suggestion"
+  },
+  {
+   "fieldname": "low_stock_threshold",
+   "fieldtype": "Percent",
+   "label": "Low Stock Threshold"
+  },
+  {
+   "fieldname": "high_stock_threshold",
+   "fieldtype": "Percent",
+   "label": "High Stock Threshold"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_yaws",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gyok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rhlb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "For Calculations",
+   "fieldname": "period_days",
+   "fieldtype": "Int",
+   "label": "Period (Days)"
+  },
+  {
+   "fieldname": "stock_level",
+   "fieldtype": "Select",
+   "label": "Stock Level",
+   "options": "\nStable\nLow\nHigh"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-04 03:03:42.463508",
+ "modified_by": "Administrator",
+ "module": "Advance ERP",
+ "name": "Price Estimation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
