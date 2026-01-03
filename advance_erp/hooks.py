@@ -43,8 +43,9 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_js = {"Quotation" : "public/js/quotation.js",
+              "Sales Invoice" : "public/js/sales_invoice.js"}
+# doctype_list_js = {"Sales Order" : "/public/js/sales-order-listview.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -230,6 +231,22 @@ app_license = "mit"
 # 		"doctype": "{doctype_4}"
 # 	}
 # ]
+
+# scheduler_events = {
+#     "hourly": [
+#         "advance_erp.advance_erp.pricing.price_calculator.generate_pricing_suggestions"
+#     ]
+# }
+
+# doc_events = {
+#     "Address": {
+#         "before_save": "advance_erp.advance_erp.page.google_map.geocoding.set_lat_lng"
+#     },
+#     "Warehouse": {
+#         "before_save": "advance_erp.advance_erp.page.google_map.geocoding.set_lat_lng"
+#     }
+# }
+
 
 # Authentication and authorization
 # --------------------------------
