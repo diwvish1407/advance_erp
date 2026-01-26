@@ -89,6 +89,7 @@ frappe.ui.form.on("Quotation", {
         }
         if (frm.doc.docstatus === 1) {
             frm.remove_custom_button('View Last Prices');
+            frm.remove_custom_button('Suggest Price');
         }
     }
 });
@@ -163,7 +164,7 @@ function fetch_last_prices(filters, dialog, frm) {
     let all_customers = false;
     let customer_group = null;
     if (filters.customer_filter_type === 'Current Customer') {
-        customer = frm.doc.customer;
+        customer = frm.doc.party_name;
     } 
     else if (filters.customer_filter_type === 'All Customers') {
         all_customers = true;
@@ -179,17 +180,19 @@ function fetch_last_prices(filters, dialog, frm) {
     frappe.call({
         method: 'advance_erp.advance_erp.pricing.quotation.get_last_prices',
         args: {
-            customer,
-            all_customers,
-            customer_group,
             item_codes,
+            all_customers,
+            customer,
+            customer_group,
             last_n_prices: filters.last_n_prices
         },
         callback: function (r) {
             if (r.message && r.message.length) {
                 show_last_prices_table(r.message, dialog, frm);
             } else {
-                frappe.msgprint(__('No prices found'));
+                dialog.$table_wrapper.remove();
+                frappe.msgprint(__('<b>No Historical Price Found.</b>'));
+
             }
         }
     });

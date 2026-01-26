@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-01-01 20:02:27.296824",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "warehouse",
+  "delivery_date",
+  "start_time",
+  "column_break_lioy",
+  "start_latitude",
+  "maximum_routes",
+  "column_break_biiv",
+  "start_longitude",
+  "status",
+  "section_break_vgik",
+  "delivery_routes",
+  "section_break_caax",
+  "column_break_phlm",
+  "total_distance",
+  "amended_from",
+  "column_break_jcqs",
+  "total_duration",
+  "column_break_jkwc",
+  "end_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_caax",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delivery Route Plan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_lioy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fetch_from": "warehouse.custom_latitude",
+   "fieldname": "start_latitude",
+   "fieldtype": "Float",
+   "label": "Start Latitude",
+   "precision": "6",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "warehouse.custom_longitude",
+   "fieldname": "start_longitude",
+   "fieldtype": "Float",
+   "label": "Start Longitude",
+   "precision": "6",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_distance",
+   "fieldtype": "Float",
+   "label": "Total Distance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_duration",
+   "fieldtype": "Float",
+   "label": "Total Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPending\nApproved\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "column_break_biiv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maximum_routes",
+   "fieldtype": "Int",
+   "label": "Maximum Route(s)"
+  },
+  {
+   "fieldname": "column_break_phlm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vgik",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "delivery_routes",
+   "fieldtype": "Table",
+   "label": "Delivery Routes",
+   "options": "Delivery Routes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "column_break_jcqs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jkwc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MAT-DRP-.YYYY.-.##."
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-03 00:36:25.650126",
+ "modified_by": "Administrator",
+ "module": "Advance ERP",
+ "name": "Delivery Route Plan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

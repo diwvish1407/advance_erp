@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-31 22:07:22.950369",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "min_qty",
+  "max_qty",
+  "price_adjust_"
+ ],
+ "fields": [
+  {
+   "fieldname": "min_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Min Qty",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "max_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Max Qty",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "price_adjust_",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Price Adjust %",
+   "non_negative": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-12-31 22:09:11.808883",
+ "modified_by": "Administrator",
+ "module": "Advance ERP",
+ "name": "Quantity-Based Pricing",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

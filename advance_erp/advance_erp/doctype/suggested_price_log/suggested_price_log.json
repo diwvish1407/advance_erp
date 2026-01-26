@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-31 23:50:42.354794",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "quotation_item",
+  "current_price",
+  "base_price",
+  "stock_adjustment_",
+  "customer_segment_adjustment_",
+  "column_break_ulxv",
+  "quotation",
+  "suggested_price",
+  "demand_adjustment_",
+  "season__campaign_adjustment_",
+  "margin_checked",
+  "applied",
+  "section_break_rige",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_rige",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Suggested Price Log",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "quotation_item",
+   "fieldtype": "Link",
+   "label": "Quotation Item",
+   "options": "Quotation Item"
+  },
+  {
+   "fieldname": "column_break_ulxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quotation",
+   "fieldtype": "Link",
+   "label": "Quotation",
+   "options": "Quotation"
+  },
+  {
+   "fieldname": "current_price",
+   "fieldtype": "Currency",
+   "label": "Current Price"
+  },
+  {
+   "fieldname": "suggested_price",
+   "fieldtype": "Currency",
+   "label": "Suggested Price"
+  },
+  {
+   "fieldname": "base_price",
+   "fieldtype": "Currency",
+   "label": "Base Price"
+  },
+  {
+   "fieldname": "demand_adjustment_",
+   "fieldtype": "Float",
+   "label": "Demand Adjustment %"
+  },
+  {
+   "fieldname": "stock_adjustment_",
+   "fieldtype": "Float",
+   "label": "Stock Adjustment %"
+  },
+  {
+   "fieldname": "season__campaign_adjustment_",
+   "fieldtype": "Float",
+   "label": "Season / Campaign Adjustment %"
+  },
+  {
+   "fieldname": "customer_segment_adjustment_",
+   "fieldtype": "Float",
+   "label": "Customer Segment Adjustment %"
+  },
+  {
+   "default": "0",
+   "fieldname": "margin_checked",
+   "fieldtype": "Check",
+   "label": "Margin Checked"
+  },
+  {
+   "default": "0",
+   "fieldname": "applied",
+   "fieldtype": "Check",
+   "label": "Applied?"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-12-31 23:54:49.124509",
+ "modified_by": "Administrator",
+ "module": "Advance ERP",
+ "name": "Suggested Price Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,448 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-31 21:54:49.667471",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_pricing_controls_tab",
+  "overview_section",
+  "item",
+  "customer",
+  "column_break_yxfq",
+  "item_name",
+  "customer_name",
+  "price_list",
+  "column_break_qszk",
+  "item_group",
+  "customer_group",
+  "item_price",
+  "general_pricing_controls_section",
+  "historical_sales_period_days",
+  "minimum_margin_",
+  "column_break_xktn",
+  "interval_days",
+  "maximum_price_adjustment_",
+  "column_break_tfgs",
+  "recent_sales_period_days",
+  "demand_velocity_parameters_section",
+  "demand_threshold_",
+  "demand_weight",
+  "column_break_avsa",
+  "quantity_based_pricing",
+  "cost_margin_controls_section",
+  "base_cost_field",
+  "column_break_fcdw",
+  "cost_adjustment_weight",
+  "column_break_mbzk",
+  "minimum_selling_price",
+  "discount_historical_behaviour_section",
+  "discount_history_weight",
+  "column_break_vbvj",
+  "avg_historical_selling_price",
+  "column_break_kfev",
+  "price_volatility_limit_",
+  "stock_inventory_controls_section",
+  "stock_low_threshold",
+  "column_break_rwuv",
+  "stock_high_threshold",
+  "column_break_zxua",
+  "stock_weight",
+  "customer_market_segmentation_section",
+  "external_market_price_source",
+  "column_break_gaba",
+  "competitor_price_adjustment_",
+  "column_break_xtfk",
+  "market_trend_weight",
+  "seasonality_promotions_section",
+  "season",
+  "campaign_start_date",
+  "column_break_asik",
+  "seasonal_price_adjustment_",
+  "campaign_end_date",
+  "column_break_avwf",
+  "marketing_campaign_influence_",
+  "item_lifecycle_strategy_section",
+  "lifecycle_stage",
+  "column_break_nkcv",
+  "lifecycle_price_adjustment_",
+  "strategic_override",
+  "tab_2_tab",
+  "ai__smart_pricing_section",
+  "enable_ai_suggestions",
+  "ai_weight",
+  "column_break_sylr",
+  "explanation"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_pricing_controls_section",
+   "fieldtype": "Section Break",
+   "label": "General Pricing Controls"
+  },
+  {
+   "description": "Minimum Profit Margin",
+   "fieldname": "minimum_margin_",
+   "fieldtype": "Float",
+   "label": "Minimum Margin %"
+  },
+  {
+   "fieldname": "column_break_xktn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maximum_price_adjustment_",
+   "fieldtype": "Float",
+   "label": "Maximum Price Adjustment %"
+  },
+  {
+   "fieldname": "historical_sales_period_days",
+   "fieldtype": "Int",
+   "label": "Historical Sales Period (Days)"
+  },
+  {
+   "fieldname": "interval_days",
+   "fieldtype": "Int",
+   "label": "Interval Days"
+  },
+  {
+   "fieldname": "general_pricing_controls_tab",
+   "fieldtype": "Tab Break",
+   "label": "Detail"
+  },
+  {
+   "fieldname": "recent_sales_period_days",
+   "fieldtype": "Int",
+   "label": "Recent Sales Period (Days)"
+  },
+  {
+   "fieldname": "column_break_tfgs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "demand_velocity_parameters_section",
+   "fieldtype": "Section Break",
+   "label": "Demand & Velocity Parameters"
+  },
+  {
+   "fieldname": "demand_threshold_",
+   "fieldtype": "Float",
+   "label": "Demand Threshold %"
+  },
+  {
+   "fieldname": "column_break_avsa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "demand_weight",
+   "fieldtype": "Float",
+   "label": "Demand Weight"
+  },
+  {
+   "fieldname": "quantity_based_pricing",
+   "fieldtype": "Table",
+   "label": "Quantity Based Pricing",
+   "options": "Quantity-Based Pricing"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_margin_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Cost & Margin Controls"
+  },
+  {
+   "fieldname": "base_cost_field",
+   "fieldtype": "Link",
+   "label": "Base Cost Field",
+   "options": "Item Price"
+  },
+  {
+   "fieldname": "column_break_yxfq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qszk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_price",
+   "fieldtype": "Link",
+   "label": "Item Price",
+   "options": "Item Price"
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Price List"
+  },
+  {
+   "fetch_from": "item.item_group",
+   "fieldname": "item_group",
+   "fieldtype": "Data",
+   "label": "Item Group",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.customer_group",
+   "fieldname": "customer_group",
+   "fieldtype": "Data",
+   "label": "Customer Group",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fcdw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_adjustment_weight",
+   "fieldtype": "Float",
+   "label": "Cost Adjustment Weight"
+  },
+  {
+   "fieldname": "column_break_mbzk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_selling_price",
+   "fieldtype": "Currency",
+   "label": "Minimum Selling Price"
+  },
+  {
+   "fieldname": "discount_historical_behaviour_section",
+   "fieldtype": "Section Break",
+   "label": "Discount & Historical Behaviour"
+  },
+  {
+   "fieldname": "discount_history_weight",
+   "fieldtype": "Float",
+   "label": "Discount History Weight"
+  },
+  {
+   "fieldname": "avg_historical_selling_price",
+   "fieldtype": "Read Only",
+   "label": "Avg Historical Selling Price"
+  },
+  {
+   "fieldname": "column_break_vbvj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kfev",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_volatility_limit_",
+   "fieldtype": "Float",
+   "label": "Price Volatility Limit %"
+  },
+  {
+   "fieldname": "stock_inventory_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Stock / Inventory Controls"
+  },
+  {
+   "fieldname": "stock_low_threshold",
+   "fieldtype": "Float",
+   "label": "Stock Low Threshold"
+  },
+  {
+   "fieldname": "column_break_rwuv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "stock_high_threshold",
+   "fieldtype": "Float",
+   "label": "Stock High Threshold"
+  },
+  {
+   "fieldname": "column_break_zxua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "stock_weight",
+   "fieldtype": "Float",
+   "label": "Stock Weight"
+  },
+  {
+   "fieldname": "customer_market_segmentation_section",
+   "fieldtype": "Section Break",
+   "label": "Customer & Market Segmentation"
+  },
+  {
+   "fieldname": "competitor_price_adjustment_",
+   "fieldtype": "Float",
+   "label": "Competitor Price Adjustment %"
+  },
+  {
+   "fieldname": "column_break_gaba",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "market_trend_weight",
+   "fieldtype": "Float",
+   "label": "Market Trend Weight"
+  },
+  {
+   "fieldname": "column_break_xtfk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "external_market_price_source",
+   "fieldtype": "Data",
+   "label": "External Market Price Source"
+  },
+  {
+   "fieldname": "seasonality_promotions_section",
+   "fieldtype": "Section Break",
+   "label": "Seasonality & Promotions"
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Select",
+   "label": "Season",
+   "options": "\nSummer\nWinter\nFestival"
+  },
+  {
+   "fieldname": "column_break_asik",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seasonal_price_adjustment_",
+   "fieldtype": "Float",
+   "label": "Seasonal Price Adjustment %"
+  },
+  {
+   "fieldname": "column_break_avwf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marketing_campaign_influence_",
+   "fieldtype": "Float",
+   "label": "Marketing Campaign Influence %"
+  },
+  {
+   "fieldname": "campaign_start_date",
+   "fieldtype": "Date",
+   "label": "Campaign Start Date"
+  },
+  {
+   "fieldname": "campaign_end_date",
+   "fieldtype": "Date",
+   "label": "Campaign End Date"
+  },
+  {
+   "fieldname": "item_lifecycle_strategy_section",
+   "fieldtype": "Section Break",
+   "label": "Item Lifecycle & Strategy"
+  },
+  {
+   "fieldname": "lifecycle_stage",
+   "fieldtype": "Select",
+   "label": "Lifecycle Stage",
+   "options": "\nNew\nGrowth\nMature\nDecline"
+  },
+  {
+   "fieldname": "column_break_nkcv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lifecycle_price_adjustment_",
+   "fieldtype": "Float",
+   "label": "Lifecycle Price Adjustment %"
+  },
+  {
+   "default": "0",
+   "fieldname": "strategic_override",
+   "fieldtype": "Check",
+   "label": "Strategic Override"
+  },
+  {
+   "fieldname": "ai__smart_pricing_section",
+   "fieldtype": "Section Break",
+   "label": "AI / Smart Pricing"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_ai_suggestions",
+   "fieldtype": "Check",
+   "label": "Enable AI Suggestions"
+  },
+  {
+   "fieldname": "column_break_sylr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ai_weight",
+   "fieldtype": "Float",
+   "label": "AI Weight"
+  },
+  {
+   "fieldname": "explanation",
+   "fieldtype": "Small Text",
+   "label": "Explanation"
+  },
+  {
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "AI Suggested"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-31 23:48:19.374064",
+ "modified_by": "Administrator",
+ "module": "Advance ERP",
+ "name": "Pricing Strategy Configuration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

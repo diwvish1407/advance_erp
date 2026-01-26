@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-01 20:07:55.476106",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "route_no",
+  "vehicle",
+  "distance",
+  "shipping_address_name",
+  "eta",
+  "column_break_gnaz",
+  "sequence",
+  "driver",
+  "duration",
+  "small_text_odot",
+  "column_break_icyy",
+  "delivery_note",
+  "delivery_person",
+  "customer",
+  "status",
+  "latitude",
+  "longitude"
+ ],
+ "fields": [
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Delivery Note",
+   "options": "Delivery Note",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gnaz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "delivery_note.customer",
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.custom_longitude",
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "eta",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Estimated Arrival",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPending\nDelivered"
+  },
+  {
+   "fieldname": "route_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Route No.",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sequence",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Driver",
+   "options": "Driver",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle",
+   "options": "Vehicle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_icyy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Delivery Person",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "distance",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Distance"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Duration"
+  },
+  {
+   "fetch_from": "delivery_note.shipping_address",
+   "fieldname": "small_text_odot",
+   "fieldtype": "Small Text",
+   "label": "Shipping Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "delivery_note.shipping_address_name",
+   "fieldname": "shipping_address_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shipping Address Name",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-02 22:04:08.667214",
+ "modified_by": "Administrator",
+ "module": "Advance ERP",
+ "name": "Delivery Routes",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

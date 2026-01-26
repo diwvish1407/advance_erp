@@ -3,12 +3,11 @@ from frappe.utils import add_days, today
 import json
 
 @frappe.whitelist()
-def get_last_prices(item_codes, customer=None, all_customers=False, customer_group=None, last_n_prices=5):
-    print(item_codes)
+def get_last_prices(item_codes, all_customers, customer=None, customer_group=None, last_n_prices=5):
     if isinstance(item_codes, str):
         item_codes = json.loads(item_codes)
     customer_conditions = []
-    if not all_customers:
+    if all_customers == "false":
         if customer:
             customer_conditions.append(f"si.customer = '{customer}'")
         elif customer_group:
